@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="38mm"
+   height="38mm"
+   viewBox="0 0 38 38"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (1:1.4+202410161351+e7c3feb100)"
+   sodipodi:docname="frlogo (2).svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.71535494"
+     inkscape:cx="69.895373"
+     inkscape:cy="285.17312"
+     inkscape:window-width="1250"
+     inkscape:window-height="758"
+     inkscape:window-x="1930"
+     inkscape:window-y="36"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Слой 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       d="m 15.029454,12.113398 q 0,0 0,-11.633398 h 7.9375 v 11.658203 q 0,0 10.0707,-5.829102 l 3.96875,6.870899 -10.0707,5.804297 q 0,0 10.0707,5.829101 l -3.96875,6.870898 -10.0707,-5.829101 q 0,0 0,11.658201 h -7.9375 V 25.855195 q 0,0 -10.070704,5.829101 L 0.99,24.813398 11.035898,18.984297 q 0,0 -10.045898,-5.804297 L 4.95875,6.309101 Z"
+       id="path1" />
+  </g>
+</svg>
