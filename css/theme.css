@@ -1,0 +1,22 @@
+#page-wrapper {
+    height: 100vh;
+    /* display: flex; */
+}
+#side-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+#page-wrapper:not(.right-hand) #side-buttons {
+    padding-left: 5px;
+}
+#page-wrapper.right-hand #side-buttons {
+    padding-right: 5px;
+    right: 0
+}
+#page-wrapper.right-hand #hand-theme .bi::before {
+    transform: scale(-1, 1);
+}
+#main {
+    padding-left: 42px;
+}

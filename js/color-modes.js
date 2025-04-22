@@ -30,7 +30,7 @@
   setTheme(getPreferredTheme())
 
   const showActiveTheme = (theme) => {
-    const themeSwitcher = document.querySelector('#bd-theme')
+    const themeSwitcher = document.querySelector('#color-theme')
 
     if (!themeSwitcher) {
       return
@@ -58,7 +58,7 @@
   window.addEventListener('DOMContentLoaded', () => {
     showActiveTheme(getPreferredTheme())
 
-    const toggle = document.querySelector('#bd-theme')
+    const toggle = document.querySelector('#color-theme')
     toggle.addEventListener('click', () => {
           const theme = toggle.getAttribute('data-bs-theme-value')
           setStoredTheme(theme)
