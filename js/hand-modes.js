@@ -29,6 +29,8 @@
       if (!themeSwitcher) {
         return
       }
+
+     
   
       const mainContainer = document.querySelector('#page-wrapper')
       if (mainContainer.classList.contains('right-hand')) {
@@ -59,9 +61,12 @@
   
     window.addEventListener('DOMContentLoaded', () => {
     //   showActiveTheme(getPreferredTheme())
-    //  setActiveTheme()
+      //setActiveTheme()
   
       const toggle = document.querySelector('#hand-theme')
+      if (!toggle.classList.contains('is-active')) {
+        toggle.classList.add('is-active')
+      }
       toggle.addEventListener('click', () => {
     //         const theme = toggle.getAttribute('data-bs-theme-value')
     //         setStoredTheme(theme)

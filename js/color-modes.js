@@ -43,6 +43,9 @@
     themeSwitcher.setAttribute('title', themeText)
     themeSwitcher.children[0].classList.remove(themeSwitcher.children[0].classList[0])
     themeSwitcher.children[0].classList.add(themeIcon)
+    // if (!themeSwitcher.classList.contains('is-active')) {
+    //   themeSwitcher.classList.add('is-active')
+    // }
   }
 
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
@@ -59,6 +62,9 @@
     showActiveTheme(getPreferredTheme())
 
     const toggle = document.querySelector('#color-theme')
+    if (!toggle.classList.contains('is-active')) {
+      toggle.classList.add('is-active')
+    }
     toggle.addEventListener('click', () => {
           const theme = toggle.getAttribute('data-bs-theme-value')
           setStoredTheme(theme)
