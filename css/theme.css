@@ -27,10 +27,16 @@
 #page-wrapper.right-hand #hand-theme .bi::before {
     transform: scale(-1, 1);
 }
-/* body,html {
-    scroll-behavior: smooth;
-} */
 
+#page-wrapper:not(.right-hand) 
+.offcanvas-header .btn-close {
+    margin-left: calc(-0.5 * var(--bs-offcanvas-padding-x));
+    margin-right: auto;
+}
+
+#side-buttons {
+    bottom: 10%;
+}
 #side-buttons .btn {
     display: none;
     transition-behavior: allow-discrete;
@@ -44,3 +50,20 @@
     opacity: 1;
     height: auto;
 }
+/* BS CAROUSEL CUSTOM */
+.carousel-indicators [data-bs-target] {
+    width: 10px;
+  height: 10px;
+  border-radius:
+5px;
+  border:
+1px;
+transition-duration: 0.5s;
+transition-property: width, opacity;
+transition-timing-function: linear;
+}
+
+.carousel-indicators .active {
+    width: 30px;
+}
+/* BS CAROUSEL CUSTOM */
