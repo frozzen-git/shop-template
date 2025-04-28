@@ -2,18 +2,67 @@
     'use strict'
 
     window.addEventListener('DOMContentLoaded', () => {
-        document.querySelectorAll('.carousel').forEach((element) => new bootstrap.Carousel(element))
+        // CAROUSEL
+        document.querySelectorAll('.carousel').forEach((element) => {
+            let id = element.id
+            if (!id) {
+                id = String(Date.now().toString(32) + Math.random().toString(16)).replace(/\./g, '');
+                element.id = id
+            }
 
-        document.querySelectorAll('.carousel-control-panel').forEach((panel) => {
-            const carousel = bootstrap.Carousel.getInstance(panel.parentElement)
-            for (let element of panel.children) {
-                element.addEventListener('mouseover', () => {
-                    const index = element.getAttribute('data-slide-to')
-                    // console.log(index)
-                    carousel.to(index)
-                })
+            let slides = element.getElementsByClassName('carousel-item')
+            if (!slides.length) {
+                return;
+            }
+
+            if (!element.getElementsByClassName('carousel-item active').length) {
+                slides[0].classList.add('active')
+            }
+
+            let indicators = document.createElement('div')
+            indicators.className = 'carousel-indicators'
+            let controls
+            if (!element.classList.contains('slider-buttons')) {
+                controls = document.createElement('div')
+                controls.classList.add('mouse-device', 'carousel-control-panel')
+            }
+
+            Object.keys(slides).forEach((index) => {
+                let active = slides[index].classList.contains('active')
+                indicators.insertAdjacentHTML('beforeend', '<button type="button" data-bs-target="#' + id + '" data-bs-slide-to="' + index + '"' + (active ? ' class="active"' : '') + '></button>')
+                if (!element.classList.contains('slider-buttons')) {
+                    controls.insertAdjacentHTML('beforeend', '<div data-slide-to="' + index + '"></div>')
+                }
+            })
+
+            element.insertAdjacentElement('beforeend', indicators)
+            if (element.classList.contains('slider-buttons')) {
+                element.insertAdjacentHTML('beforeend',
+                    '<button class="mouse-device carousel-control-prev" type="button" data-bs-target="#' + id + '" data-bs-slide="prev">'
+                    + '<span class="carousel-control-prev-icon" aria-hidden="true"></span>'
+                    + '<span class="visually-hidden">Previous</span>'
+                    + '</button>')
+                element.insertAdjacentHTML('beforeend',
+                    '<button class="mouse-device carousel-control-next" type="button" data-bs-target="#'+ id + '" data-bs-slide="next">'
+                    + '<span class="carousel-control-next-icon" aria-hidden="true"></span>'
+                    + '<span class="visually-hidden">Next</span>'
+                    + '</button>')
+            }
+            else {
+                element.insertAdjacentElement('beforeend', controls)
+            }
+
+            const carousel = new bootstrap.Carousel(element)
+            if (!element.classList.contains('slider-buttons')) {
+                for (let el of controls.children) {
+                    el.addEventListener('mouseover', () => {
+                        const index = el.getAttribute('data-slide-to')
+                        carousel.to(index)
+                    })
+                }
             }
         })
+        // CAROUSEL
     })
 })()
   

@@ -1,3 +1,8 @@
+@media (pointer: coarse) {
+    .mouse-device {
+        display: none;
+    }
+}
 #page-wrapper {
     height: 100vh;
     /* display: flex; */
@@ -21,6 +26,12 @@
     }
     #page-wrapper.right-hand #main {
         padding-right: 42px;
+    }
+    #page-wrapper:not(.right-hand) #alert {
+        padding-left: calc(1rem + 42px);
+    }
+    #page-wrapper.right-hand #alert {
+        padding-right: calc(1rem + 42px);
     }
     
 }
@@ -54,11 +65,8 @@
 .carousel-indicators [data-bs-target] {
     width: 10px;
   height: 10px;
-  border-radius:
-5px;
-  border:
-1px;
-/* transition-duration: 0.5s; */
+  border-radius: 5px;
+  border: 1px;
 transition-property: width, opacity;
 transition-timing-function: linear;
 }
@@ -68,7 +76,7 @@ transition-timing-function: linear;
 }
 .carousel-item, .carousel-indicators [data-bs-target] {
     transition-duration: 0.3s;
-} 
+}
 
 .carousel-control-panel {
     position: absolute;
@@ -84,15 +92,44 @@ transition-timing-function: linear;
     background: transparent;
     flex-grow: 1;
 }
+.carousel-control-prev, .carousel-control-next {
+    width: auto;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+.carousel-control-prev {
+    left: -20px;
+}
+.carousel-control-next {
+    right: -20px;
+}
+.carousel:hover .carousel-control-prev {
+    opacity: 0.7;
+    left: 0px;
+}
+.carousel:hover .carousel-control-next {
+    opacity: 0.7;
+    right: 0px;
+}
+/* .carousel-control-prev:focus:not(:hover), */
+.carousel-control-prev:focus,
+.carousel-control-next:focus {
+    opacity: 0;
+}
 /* BS CAROUSEL CUSTOM */
 
-/* проверка, является ли основное устройство ввода указателем, и насколько оно точное. 
-none — основное устройство ввода не является указателем;
-coarse — основное устройство ввода является указателем с ограниченной точностью. Как палец в случае с тач-скрином;
-fine — основное устройство ввода — указатель с высокой точностью. Как курсор мыши. */
-
-@media (pointer: coarse) {
-    .mouse-device {
-        display: none;
-    }
+/* BS ALERT */
+#alert {
+    position: fixed;
+    z-index: 100;
+    top: 15%;
+    /* left: 50%; */
+    /* margin: 0 auto; */
+    left: 0;
+  right: 0;
+  padding: 1rem 1rem;
 }
+#alert i[class^="bi-"] {
+    margin-right: 0.3rem;
+}
+/* BS ALERT */
