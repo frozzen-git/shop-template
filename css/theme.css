@@ -46,6 +46,9 @@ justify-content: end;
     padding-right: 5px;
     right: 0
 }
+header .dropdown-menu {
+    z-index: 1021;
+}
 @media(max-width:575.98px) {
     #page-wrapper:not(.right-hand) #main {
         padding-left: 42px;
