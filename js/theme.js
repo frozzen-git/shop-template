@@ -63,6 +63,26 @@
             }
         })
         // CAROUSEL
+
+        // CATEGORIES MENU
+        document.querySelectorAll('.cat-card .btn-show-sub').forEach((element) => {
+            element.addEventListener('click', (e) => {
+                e.preventDefault()
+                e.stopPropagation()
+                let li = element.closest('.cat-card')
+                let uls = li.getElementsByTagName('ul')
+                if (uls.length && uls[0].classList.contains('show')) {
+                    for (let ul of uls) {
+                        ul.classList.remove('show')
+                    }
+                }
+                else {
+                    uls[0].classList.add('show')
+                }
+            })
+        })
+        // CATEGORIES MENU
+
     })
 })()
   
