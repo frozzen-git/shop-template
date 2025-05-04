@@ -71,7 +71,10 @@
                 e.stopPropagation()
                 let li = element.closest('.cat-card')
                 let uls = li.getElementsByTagName('ul')
-                if (uls.length && uls[0].classList.contains('show')) {
+                if (!uls.length) {
+                    return
+                }
+                if (uls[0].classList.contains('show')) {
                     for (let ul of uls) {
                         ul.classList.remove('show')
                     }
