@@ -1101,10 +1101,17 @@
           </ul> -->
 
           <style>
+            .cat-card.carousel-item {
+              display: none;
+            }
+            .cat-card.carousel-item.active {
+display: flex !important;
+            }
           </style>
-          <nav id="cat-menu" class="pb-5 mt-5">
-            <ul class="cat-1 list-unstyled">
-              <li class="cat-card">
+          <!-- https://swiperjs.com/get-started -->
+          <nav id="cat-menu" class="pb-5 mt-5 carousel slide">
+            <ul class="cat-1 list-unstyled carousel-inner">
+              <li class="cat-card carousel-item">
                 <a href="#"
                   ><img src="image/cat-1-250x250.jpg" />
                   <div class="title">Desktops</div>
@@ -1171,13 +1178,55 @@
                   </li>
                 </ul>
               </li>
-              <!-- <li><a href="#">Laptops &amp; Notebooks</a></li>
-  <li><a href="#">Components</a></li>
-  <li><a href="#">Tablets</a></li>
-  <li><a href="#">Software</a></li>
-  <li><a href="#">Phones &amp; PDAs</a></li>
-  <li><a href="#">Cameras</a></li>
-  <li><a href="#">MP3 Players</a></li> -->
+              <li class="cat-card carousel-item"><a href="#"
+                ><img src="image/cat-1-250x250.jpg" />
+                <div class="title">Laptops &amp; Notebooks</div>
+                <div class="description small lh-sm">
+                  Some quick example text to build on the card title and make
+                  up the bulk of the card's content
+                </div></a></li>
+  <li class="cat-card carousel-item"><a href="#"
+    ><img src="image/cat-1-250x250.jpg" />
+    <div class="title">Components</div>
+    <div class="description small lh-sm">
+      Some quick example text to build on the card title and make
+      up the bulk of the card's content
+    </div></a></li>
+  <li class="cat-card carousel-item"><a href="#"
+    ><img src="image/cat-1-250x250.jpg" />
+    <div class="title">Tablets</div>
+    <div class="description small lh-sm">
+      Some quick example text to build on the card title and make
+      up the bulk of the card's content
+    </div></a></li>
+  <li class="cat-card carousel-item"><a href="#"
+    ><img src="image/cat-1-250x250.jpg" />
+    <div class="title">Software</div>
+    <div class="description small lh-sm">
+      Some quick example text to build on the card title and make
+      up the bulk of the card's content
+    </div></a></li>
+  <li class="cat-card carousel-item"><a href="#"
+    ><img src="image/cat-1-250x250.jpg" />
+    <div class="title">Phones &amp; PDAs</div>
+    <div class="description small lh-sm">
+      Some quick example text to build on the card title and make
+      up the bulk of the card's content
+    </div></a></li>
+  <li class="cat-card carousel-item"><a href="#"
+    ><img src="image/cat-1-250x250.jpg" />
+    <div class="title">Cameras</div>
+    <div class="description small lh-sm">
+      Some quick example text to build on the card title and make
+      up the bulk of the card's content
+    </div></a></li>
+  <li class="cat-card carousel-item"><a href="#"
+    ><img src="image/cat-1-250x250.jpg" />
+    <div class="title">MP3 Players</div>
+    <div class="description small lh-sm">
+      Some quick example text to build on the card title and make
+      up the bulk of the card's content
+    </div></a></li>
             </ul>
           </nav>
         </div>
