@@ -80,8 +80,25 @@
                     }
                 }
                 else {
+                    let swiper = element.closest('nav').swiper
+                    if (typeof swiper !== 'undefined') {
+                        let elSwiperIndex = li.getAttribute('data-swiper-slide-index')
+
+                        if (elSwiperIndex !== swiper.realIndex) {
+                                if ((swiper.realIndex + swiper.params.slidesPerView - 1) == elSwiperIndex + swiper.slides.length) {
+                                    // console.log('slideNext')
+                                    swiper.slideNext()
+                                }
+                            }
+        
+                    }
+
                     uls[0].classList.add('show')
                 }
+
+
+                // 
+                // 
             })
         })
         // CATEGORIES MENU
