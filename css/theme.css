@@ -363,7 +363,9 @@ ul:not(.cat-1) li.cat-card:has(ul.show) {
 }
 .cat-card ul:not(.cat-1) a > img {
   width: 50px;
-  
+  float: right;
+  margin-left: 0.5rem;
+  margin-right: 0;
 }
 }
 .right-hand #cat-menu, .right-hand #cat-menu-swiper {
@@ -376,5 +378,11 @@ margin-left: auto;
  .cat-card:has(ul.show) > a {
   flex-direction: row;
 }
+.cat-card ul:not(.cat-1) a > img {
+  float: left;
+  margin-right: 0.5rem;
+  margin-left: 0;
+}
+
 }
 /* CATEGORIES MENU */
