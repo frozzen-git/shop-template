@@ -275,6 +275,9 @@ ul.cat-1 {
 .cat-1 > li > a > .title {
   font-size: calc(1.325rem + 0.9vw);
 }
+.cat-card .title+.description {
+margin-bottom: 0.25rem;
+}
 .cat-card a {
   border-radius: var(--bs-border-radius);
   background-color: RGBA(var(--bs-secondary-rgb), var(--bs-bg-opacity, 1));
@@ -367,6 +370,7 @@ ul:not(.cat-1) li.cat-card:has(ul.show) {
   margin-left: 0.5rem;
   margin-right: 0;
 }
+
 }
 .right-hand #cat-menu, .right-hand #cat-menu-swiper {
 
