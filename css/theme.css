@@ -275,8 +275,8 @@ ul.cat-1 {
 .cat-1 > li > a > .title {
   font-size: calc(1.325rem + 0.9vw);
 }
-.cat-card .title+.description {
-margin-bottom: 0.25rem;
+.cat-card .title + .description {
+margin-top: 0.25rem;
 }
 .cat-card a {
   border-radius: var(--bs-border-radius);

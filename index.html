@@ -232,11 +232,32 @@
             >
               <i class="fa-solid fa-bars"></i>
             </button> -->
-
+<style>
+  #cat-menu-swiper {
+    .cat-card.current-category > a {
+          background-color: RGBA(var(--bs-primary-rgb), var(--bs-bg-opacity, 1));
+    }
+  }
+</style>
             <nav id="cat-menu-swiper" class="pb-5 mt-5 swiper">
               <!-- <div class="carousel-indicators"></div> -->
               <div class="swiper-pagination"></div>
               <ul class="cat-1 list-unstyled swiper-wrapper">
+                <li class="cat-card swiper-slide"><a href="#"
+                  ><img src="image/cat-1-250x250.jpg" />
+                  <div class="title">Laptops &amp; Notebooks</div>
+                  <div class="description small lh-sm">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content
+                  </div></a></li>
+    <li class="cat-card swiper-slide current-category"><a href="#"
+      ><img src="image/cat-1-250x250.jpg" />
+      <div class="title">Components</div>
+      <div class="description small lh-sm">
+        Some quick example text to build on the card title and make
+        up the bulk of the card's content
+      </div></a></li>
+
                 <li class="cat-card swiper-slide">
                   <a href="#"
                     ><img src="image/cat-1-250x250.jpg" />
@@ -283,7 +304,7 @@
                             </div>
                           </a>
                         </li>
-                        <li class="cat-card">
+                        <li class="cat-card  current-category">
                           <a href="#"><img src="image/cat-1-250x250.jpg" /><div class="title">Scanners</div>
                             <div class="description small lh-sm">
                               Some quick example text to build on the card title and make
@@ -328,20 +349,6 @@
                     </li>
                   </ul>
                 </li>
-                <li class="cat-card swiper-slide"><a href="#"
-                  ><img src="image/cat-1-250x250.jpg" />
-                  <div class="title">Laptops &amp; Notebooks</div>
-                  <div class="description small lh-sm">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content
-                  </div></a></li>
-    <li class="cat-card swiper-slide"><a href="#"
-      ><img src="image/cat-1-250x250.jpg" />
-      <div class="title">Components</div>
-      <div class="description small lh-sm">
-        Some quick example text to build on the card title and make
-        up the bulk of the card's content
-      </div></a></li>
     <li class="cat-card swiper-slide"><a href="#"
       ><img src="image/cat-1-250x250.jpg" />
       <div class="title">Tablets</div>
