@@ -7,7 +7,8 @@
     <script src="js/color-modes.js"></script>
     <script src="js/hand-modes.js"></script>
     <script src="js/back-to-top.js"></script>
-    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" />
+    <!-- <link href="css/bootstrap.css" type="text/css" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.css">
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
@@ -179,16 +180,15 @@
       <!--  offcanvas-start -->
       <!-- style="height: auto" -->
       <div
-        class="offcanvas offcanvas-bottom"
+        class="offcanvas-lg offcanvas-bottom"
         tabindex="-1"
         style="height: auto;"
         id="offcanvasBottom"
         aria-labelledby="offcanvasBottomLabel"
+
       >
         <div class="offcanvas-body" >
-          <!-- style="display: flex;flex-direction:column; justify-content:flex-end;"  -->
-          <!-- style="flex-grow:unset;" -->
-          <div class="col-md-5">
+          <!-- <div class="col-md-5">
             <form
               action="http://oc4.test/index.php?route=common/search.redirect&amp;language=en-gb"
               method="post"
@@ -205,9 +205,9 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
             </form>
-          </div>
+          </div> -->
 
-          <p>
+          <!-- <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
             neque quam, consectetur vel dolor eget, mollis fringilla libero.
             Praesent varius erat sed pellentesque tristique. Mauris id ultricies
@@ -220,7 +220,7 @@
             mi in pulvinar rutrum, sem nibh ullamcorper metus, sit amet
             consectetur lorem dolor sit amet magna. Duis molestie convallis sem,
             quis faucibus orci maximus et.
-          </p>
+          </p> -->
             <div id="category"> <!-- class="d-block d-sm-block d-lg-none" -->
               Categories
             
@@ -233,11 +233,7 @@
               <i class="fa-solid fa-bars"></i>
             </button> -->
 <style>
-  #cat-menu-swiper {
-    .cat-card.current-category > a {
-          background-color: RGBA(var(--bs-primary-rgb), var(--bs-bg-opacity, 1));
-    }
-  }
+
 </style>
             <nav id="cat-menu-swiper" class="pb-5 mt-5 swiper">
               <!-- <div class="carousel-indicators"></div> -->
@@ -388,7 +384,7 @@
     </ul>
             </nav>
           </div>
-            <p>
+            <!-- <p>
               Etiam laoreet quam in tincidunt molestie. Praesent tempor enim eget
               augue rutrum semper. Phasellus vehicula odio at pulvinar interdum.
               Maecenas auctor hendrerit neque ac pulvinar. Vestibulum euismod urna
@@ -400,7 +396,7 @@
               nulla non tortor. Donec sagittis tincidunt lacus, id placerat ex.
               Vivamus gravida condimentum purus a malesuada. Aenean nec leo
               mauris. Aliquam finibus porta facilisis.
-            </p>
+            </p> -->
   
           </div>
 
@@ -410,6 +406,7 @@
             type="button"
             class="btn-close"
             data-bs-dismiss="offcanvas"
+            data-bs-target="#offcanvasBottom"
             aria-label="Close"
           ></button>
         </div>
@@ -507,22 +504,8 @@
 
 
 
-          <style>
-/*
-            .cat-card.carousel-item {
-              display: none;
-            }
-            .cat-card.carousel-item.active {
-display: flex !important;
-            }
-*/
-
-
-
-
-          </style>
-          <nav id="cat-menu" class="pb-5 mt-5  slide"> 
-            <!-- carousel -->
+<!-- 
+          <nav id="cat-menu" class="pb-5 mt-5 carousel  slide"> 
             <ul class="cat-1 list-unstyled carousel-inner">
               <li class="cat-card carousel-item">
                 <a href="#"
@@ -572,7 +555,6 @@ display: flex !important;
                             <i class="bi bi-arrow-down-circle-fill"></i></button
                         ></a>
                         <ul class="cat-4 list-unstyled">
-                          <!-- <li class="cat-card"><a href="#"><div class="title">Mice and Trackballs</div></a></li> -->
                           <li class="cat-card">
                             <a href="#"><img src="image/cat-1-250x250.jpg" /><div class="title">Trackballs</div></a>
                           </li>
@@ -590,7 +572,7 @@ display: flex !important;
                     <a href="#"><img src="image/cat-1-250x250.jpg" /><div class="title">Web Cameras</div></a>
                   </li>
                 </ul>
-              </li>
+              </li> -->
 
               <!-- <li class="cat-card carousel-item"><a href="#"
                 ><img src="image/cat-1-250x250.jpg" />
@@ -642,8 +624,8 @@ display: flex !important;
       up the bulk of the card's content
     </div></a></li> -->
 
-  </ul>
-          </nav>
+  <!-- </ul>
+          </nav> -->
 
 
           <!-- https://swiperjs.com/get-started -->
@@ -728,36 +710,25 @@ display: flex !important;
       </div>
     </div>
 
-    <script src="js/bootstrap.bundle.js" type="text/javascript"></script>
+    <!-- <script src="js/bootstrap.bundle.js" type="text/javascript"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.js"></script>
     <script src="js/theme.js" type="text/javascript"></script>
 
     <script src="js/swiper/swiper-bundle.js" type="text/javascript"></script>
 
     <script type="text/javascript">
+      /*
       const swiper = new Swiper('#cat-menu-swiper', {
-        // Optional parameters
         loop: true,
-//        autoHeight: true,
 spaceBetween: 16,
 mousewheel: true,
-// If we need pagination
+
         pagination: {
-//          el: '.carousel-indicators',
           el: '.swiper-pagination',
-//          bulletClass: 'carousel-indicator',
-//          bulletActiveClass: 'active',
-//          bulletElement: 'button',
           clickable: true,
-//          renderBullet: function (index, className) {
-//            return '<button type="button" data-bs-target="" data-bs-slide-to="' + index + '" class="' + className + '"></button>';
-//        },
       },
-//      grid: {
-//        fill: 'rows',
-//        rows: 1
-//      },
+
       breakpoints: {
-        // when window width is >= 
         576: {
                     slidesPerView: 2,
         },
@@ -765,30 +736,19 @@ mousewheel: true,
                     slidesPerView: 3,
         },
         992: {
-//         mousewheel: true,
+
                     slidesPerView: 4,
 
         },
         1200: {
           slidesPerView: 4,
-//          grid: {
-//            rows: 2
-//          }
+
         }
 
       }
-        // Navigation arrows
-//        navigation: {
-//          nextEl: '.swiper-button-next',
-//          prevEl: '.swiper-button-prev',
-//        },
-      
-        // And if we need scrollbar
-//        scrollbar: {
-//          el: '.swiper-scrollbar',
-//        },
+
       });
-      
+      */
     </script>
   </body>
 </html>
