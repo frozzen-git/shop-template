@@ -56,16 +56,76 @@
               <li class="text-center p-4">Your shopping cart is empty!</li>
           </ul>
     </div>-->
+      <div
+        id="header-offcanvas"
 
-              <div id="header-buttons">
-                <button
-                  id="color-theme"
+      >
+          <div id="category">
+                            <button
                   type="button"
                   class="btn btn-secondary"
+                >
+                <i class="bi-list"></i>
+                <span>Categories</span>
+                            </button>
+
+                            
+          </div>
+
+                <div class="">
+            <form
+              action=""
+              method="post"
+              class="input-group"
+            >
+              <input
+                type="text"
+                name="search"
+                value=""
+                placeholder="Search"
+                class="form-control"
+              />
+              <button type="submit" class="btn btn-light">
+                <i class="bi-search"></i>
+              </button>
+            </form>
+          </div>
+      </div>
+              <div id="header-buttons">
+                <!-- <div class="dropdown"> -->
+                <button
+                  
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <!-- <i class="bi-moon-stars-fill"></i> -->
+                  <i class="bi-gear"></i>
+                </button>
+                <!-- <ul class="dropdown-menu">
+                  <li><a
+                  id="color-theme"
+                  role="button"
+                  class="btn"
                   title="Dark Theme"
                 >
-                  <i class="bi-moon-stars-fill"></i>
-                </button>
+                  <i class="bi-moon-stars"></i>
+                  <span>Dark Theme</span>
+                </a></li>
+                  <li>
+                    <a
+          id="hand-theme"
+          role="button"
+          class="btn "
+          title=""
+        >
+          <i class="bi bi-hand-index-thumb"></i>
+        </a>
+                  </li>
+                </ul>
+
+                </div> -->
 
                 <!-- <button
           id="hand-theme"
@@ -91,9 +151,11 @@
                 <a href="#" id="" role="button" class="btn btn-secondary">
                   <i class="bi bi-person"></i>
                   <span>Login</span>
+                  <!-- <span>Войти</span> -->
                 </a>
                 <button id="" type="button" class="btn btn-secondary">
                   <i class="bi bi-heart"></i>
+                  <!-- <span>Login</span> -->
                 </button>
                 <button id="" type="button" class="btn btn-secondary">
                   <i class="bi bi-telephone-outbound"></i>

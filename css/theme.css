@@ -37,8 +37,8 @@
     display: none;
   }
 }
-  /* @media (width > var(--bs-breakpoint-xl)) { */
-  @media (width >= var(--bs-breakpoint-xl)) {
+  /* @media (width >= var(--bs-breakpoint-xl)) { */
+  @media (width >= 1200px) {
 #header-buttons {
   [role="button"] > span {
     display: inline;
