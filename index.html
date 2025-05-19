@@ -18,8 +18,8 @@
     <header>
       <div style="padding: 1rem 0">
         <div class="container">
-          <div class="row" style="align-content: center">
-            <div class="col-6 col-xl-1">
+          <div class="row align-items-center">
+            <div class="col-6 col-xl-1 order-0">
               <div class="logo">
                 <a href="#"
                   ><svg width="100%" height="100%" viewBox="0 0 38 38">
@@ -44,57 +44,88 @@
                 ></a>
               </div>
             </div>
-            <div class="col-xl-9">
-              <!-- <form action="http://oc4.test/index.php?route=common/search.redirect&amp;language=en-gb" method="post" class="input-group mb-3">
-      <input type="text" name="search" value="" placeholder="Search" class="form-control form-control-lg">
-      <button type="submit" class="btn btn-light btn-lg"><i class="fa-solid fa-magnifying-glass"></i></button>
-    </form>
-     -->
-              <!-- <div id="cart" class="col-md-4 col-lg-3 mb-2"><div class="dropdown d-grid">
-      <button type="button" data-bs-toggle="dropdown" class="btn btn-lg btn-dark d-block dropdown-toggle"><i class="fa-solid fa-cart-shopping"></i> 0 item(s) - $0.00</button>
-      <ul class="dropdown-menu dropdown-menu-end p-2">
-              <li class="text-center p-4">Your shopping cart is empty!</li>
-          </ul>
-    </div>-->
-      <div
-        id="header-offcanvas"
 
-      >
-          <div id="category">
-                            <button
-                  type="button"
-                  class="btn btn-secondary"
-                >
-                <i class="bi-list"></i>
-                <span>Categories</span>
-                            </button>
-
-                            
-          </div>
-
-                <div class="">
-            <form
-              action=""
-              method="post"
-              class="input-group"
+            <div
+              class="col-6 col-xl-2 order-1 order-xl-2 d-flex justify-content-end gap-1"
+              
             >
-              <input
-                type="text"
-                name="search"
-                value=""
-                placeholder="Search"
-                class="form-control"
-              />
-              <button type="submit" class="btn btn-light">
-                <i class="bi-search"></i>
-              </button>
-            </form>
-          </div>
-      </div>
-              <div id="header-buttons">
+              <div class="dropdown">
+                <button
+                  type="button"
+                  class="btn btn-secondary dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  $
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="EUR" class="dropdown-item">€ Euro</a></li>
+                  <li>
+                    <a href="GBP" class="dropdown-item">£ Pound Sterling</a>
+                  </li>
+                  <li>
+                    <a href="USD" class="dropdown-item">$ US Dollar</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="dropdown">
+                <button
+                  type="button"
+                  class="btn btn-secondary dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  EN
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="EUR" class="dropdown-item">English</a></li>
+                  <li>
+                    <a href="GBP" class="dropdown-item">Russian</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div id="header-middle" class="col-xl-9 d-xl-flex align-items-xl-center order-2 order-xl-1">
+
+              <div id="header-offcanvas" class="offcanvas-xl offcanvas-bottom flex-xl-grow-1">
+                <div class="offcanvas-body d-xl-flex" >
+                <div id="category">
+                  <button type="button" class="btn btn-secondary">
+                    <i class="bi-list"></i>
+                    <span>Categories</span>
+                  </button>
+                </div>
+
+                <div class="flex-xl-grow-1">
+                  <form action="" method="post" class="input-group">
+                    <input
+                      type="text"
+                      name="search"
+                      value=""
+                      placeholder="Search"
+                      class="form-control"
+                    />
+                    <button type="submit" class="btn btn-outline-secondary">
+                      <i class="bi-search"></i>
+                    </button>
+                  </form>
+                </div>
+                </div>
+                        <div class="offcanvas-header d-xl-none">
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            data-bs-target="#header-offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+              </div>
+                <div id="header-buttons-wrapper">
+              <div id="header-buttons" class="">
                 <!-- <div class="dropdown"> -->
                 <button
-                  
                   type="button"
                   class="btn btn-secondary"
                   data-bs-toggle="dropdown"
@@ -161,59 +192,19 @@
                   <i class="bi bi-telephone-outbound"></i>
                 </button>
 
-                <!-- <button
+                <button
           id=""
           type="button"
-          class="btn btn-outline-secondary is-active"
+          class="btn btn-outline-secondary d-xl-none"
           data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasBottom"
-          aria-controls="offcanvasBottom"
+          data-bs-target="#header-offcanvas"
+          aria-controls="header-offcanvas"
         >
           <i class="bi bi-list"></i>
-        </button> -->
+        </button>
               </div>
-            </div>
-            <div
-              class="col-6 col-xl-2"
-              style="display: flex; gap: 0.25rem; justify-content: end"
-            >
-              <div class="dropdown">
-                <button
-                  type="button"
-                  class="btn btn-secondary dropdown-toggle"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  $
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a href="EUR" class="dropdown-item">€ Euro</a></li>
-                  <li>
-                    <a href="GBP" class="dropdown-item">£ Pound Sterling</a>
-                  </li>
-                  <li>
-                    <a href="USD" class="dropdown-item">$ US Dollar</a>
-                  </li>
-                </ul>
               </div>
-
-              <div class="dropdown">
-                <button
-                  type="button"
-                  class="btn btn-secondary dropdown-toggle"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  EN
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a href="EUR" class="dropdown-item">English</a></li>
-                  <li>
-                    <a href="GBP" class="dropdown-item">Russian</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            </div>            
           </div>
         </div>
       </div>

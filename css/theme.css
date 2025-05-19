@@ -32,19 +32,35 @@
 } */
 
 /* -- HEADER -- */
+#header-middle, #header-middle *:not(.input-group) {
+  gap: 0.25rem;
+}
+#header-buttons-wrapper {
+  position: fixed;
+  bottom: 10%;
+}
 #header-buttons {
+  display: flex;
+  flex-direction: column;
+
   [role="button"] > span {
     display: none;
   }
 }
-  /* @media (width >= var(--bs-breakpoint-xl)) { */
-  @media (width >= 1200px) {
-#header-buttons {
-  [role="button"] > span {
-    display: inline;
-  }
-}
-  }
 
+/* @media (width >= var(--bs-breakpoint-xl)) { */
+@media (width >= 1200px) {
+#header-buttons-wrapper {
+  position: static;
+}
+  #header-buttons {
+  flex-direction: row;
+
+  [role="button"] > span {
+      display: inline;
+    }
+  }
+  /* #header-middle */
+}
 
 /* -- HEADER -- */
