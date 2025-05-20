@@ -92,7 +92,7 @@
                 <div class="offcanvas-body d-xl-flex" >
                 <div id="category">
                   <button type="button" class="btn btn-secondary">
-                    <i class="bi-list"></i>
+                    <i class="bi-handbag"></i>
                     <span>Categories</span>
                   </button>
                 </div>
@@ -123,16 +123,17 @@
         </div>
               </div>
                 <div id="header-buttons-wrapper">
-              <div id="header-buttons" class="">
+              <div id="header-buttons" class="gap-2 gap-xl-1">
                 <!-- <div class="dropdown"> -->
                 <button
                   type="button"
                   class="btn btn-secondary"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
                 >
-                  <!-- <i class="bi-moon-stars-fill"></i> -->
-                  <i class="bi-gear"></i>
+                  <!-- data-bs-toggle="dropdown"
+                  aria-expanded="false" -->
+
+                <i class="bi-moon-stars"></i>
+                  <!-- <i class="bi-gear"></i> -->
                 </button>
                 <!-- <ul class="dropdown-menu">
                   <li><a
@@ -179,7 +180,7 @@
                 <button id="" type="button" class="btn btn-secondary">
                   <i class="bi bi-cart3"></i>
                 </button>
-                <a href="#" id="" role="button" class="btn btn-secondary">
+                <a href="#" id="" role="button" class="btn btn-secondary" title="Login">
                   <i class="bi bi-person"></i>
                   <span>Login</span>
                   <!-- <span>Войти</span> -->
@@ -195,14 +196,91 @@
                 <button
           id=""
           type="button"
-          class="btn btn-outline-secondary d-xl-none"
+          class="btn btn-secondary d-xl-none"
           data-bs-toggle="offcanvas"
           data-bs-target="#header-offcanvas"
           aria-controls="header-offcanvas"
         >
-          <i class="bi bi-list"></i>
+          <i class="bi bi-handbag"></i>
         </button>
+
+
+
+
+
               </div>
+<style>
+@keyframes list-to-close-top {
+  50% {
+    width: 15px;
+    transform: translate(-2px, 4px);    
+  }
+  to {
+transform: rotateZ(45deg);
+  }
+}
+
+  #fab.active {
+  #rect-middle {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+#rect-top {
+/*
+  animation: list-to-close-top 0.3s;
+*/
+
+  transform-origin: center;
+transform: translate(-2px, 4px) rotateZ(45deg);
+width: 15px; 
+transition: all 0.3s ease;
+  
+}
+
+/* translate(-2px, 4px) */
+
+#rect-bottom {
+  opacity: 0;
+  /*transform: translate(-2px, -4px) rotate(-45deg);
+  width: 15px;
+  transition: all 0.3s ease; */
+}
+
+}
+</style>
+                              <button
+          id="fab"
+          type="button"
+          data-bs-toggle="button"
+          class="btn btn-primary d-xl-none mt-3"
+        >
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" stroke="currentColor" class="bi" viewBox="0 0 16 16">
+<rect
+       style="stroke-width:0.92112;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       id="rect-top"
+       width="10.078887"
+       height="0.078879759"
+       x="2.9605601"
+       y="3.9605601" />
+<rect
+       style="stroke-width:0.92112;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       id="rect-middle"
+       width="10.078887"
+       height="0.078879759"
+       x="2.9605601"
+       y="7.9605598" />
+<rect
+       id="rect-bottom"
+       width="10.078887"
+       height="0.078879759"
+       x="2.9605601"
+       y="11.96056"
+       style="stroke-width:0.92112;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:normal" />
+
+
+        </svg>
+          <!-- <i class="bi bi-list"></i> -->
+        </button>
               </div>
             </div>            
           </div>
