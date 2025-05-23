@@ -1,108 +1,58 @@
 (() => {
-    'use strict'
+  "use strict";
 
-    window.addEventListener('DOMContentLoaded', () => {
-        // CAROUSEL
-        document.querySelectorAll('.carousel').forEach((element) => {
-            let id = element.id
-            if (!id) {
-                id = String(Date.now().toString(32) + Math.random().toString(16)).replace(/\./g, '');
-                element.id = id
-            }
+  const bsExtraSmall = 576;
+  const bsExtraLarge = 1200;
 
-            let slides = element.getElementsByClassName('carousel-item')
-            if (!slides.length) {
-                return;
-            }
+  //     window.matchMedia(`(width < ${bsExtraLarge}px)`).addEventListener('change', onMobileSizeEvent)
 
-            if (!element.getElementsByClassName('carousel-item active').length) {
-                slides[0].classList.add('active')
-            }
+  //     function onMobileSizeEvent(mql) {
+  // console.log(mql.media, mql.matches)
+  // if (mql.matches) {
 
-            let indicators = document.createElement('div')
-            indicators.className = 'carousel-indicators'
-            let controls
-            if (!element.classList.contains('slider-buttons')) {
-                controls = document.createElement('div')
-                controls.classList.add('mouse-device', 'carousel-control-panel')
-            }
+  //             document.querySelectorAll('#header-buttons .dropdown-btn').forEach((element) => {
+  //             console.log(element, element.checkVisibility())
+  //             // console.log(bootstrap.Dropdown.getInstance(element))
+  //             //    let dropdown = bootstrap.Dropdown.getInstance(element)
+  //             //    console.log(dropdown.getConfig())
+  //     //         // element.addEventListener('show.bs.dropdown', (e) => {
+  //     //         //     console.log(e, element)
+  //     //         //     console.log(bootstrap.Dropdown.getInstance(element))
+  //     //         // })
+  //         })
 
-            Object.keys(slides).forEach((index) => {
-                let active = slides[index].classList.contains('active')
-                indicators.insertAdjacentHTML('beforeend', '<button type="button" data-bs-target="#' + id + '" data-bs-slide-to="' + index + '"' + (active ? ' class="active"' : '') + '></button>')
-                if (!element.classList.contains('slider-buttons')) {
-                    controls.insertAdjacentHTML('beforeend', '<div data-slide-to="' + index + '"></div>')
-                }
-            })
+  // }
+  // else {
 
-            element.insertAdjacentElement('beforeend', indicators)
-            if (element.classList.contains('slider-buttons')) {
-                element.insertAdjacentHTML('beforeend',
-                    '<button class="mouse-device carousel-control-prev" type="button" data-bs-target="#' + id + '" data-bs-slide="prev">'
-                    + '<span class="carousel-control-prev-icon" aria-hidden="true"></span>'
-                    + '<span class="visually-hidden">Previous</span>'
-                    + '</button>')
-                element.insertAdjacentHTML('beforeend',
-                    '<button class="mouse-device carousel-control-next" type="button" data-bs-target="#'+ id + '" data-bs-slide="next">'
-                    + '<span class="carousel-control-next-icon" aria-hidden="true"></span>'
-                    + '<span class="visually-hidden">Next</span>'
-                    + '</button>')
-            }
-            else {
-                element.insertAdjacentElement('beforeend', controls)
-            }
+  // }
+  //     }
 
-            const carousel = new bootstrap.Carousel(element)
-            if (!element.classList.contains('slider-buttons')) {
-                for (let el of controls.children) {
-                    el.addEventListener('mouseover', () => {
-                        const index = el.getAttribute('data-slide-to')
-                        carousel.to(index)
-                    })
-                }
+  window.addEventListener("DOMContentLoaded", () => {
+    [...document.querySelectorAll("#header-buttons .dropdown-toggle")].map(
+      (element) =>
+        new bootstrap.Dropdown(element, {
+          popperConfig(defaultBsPopperConfig) {
+            const newPopperConfig = Object.assign({}, defaultBsPopperConfig);
+            if (window.innerWidth < bsExtraLarge) {
+              if (window.innerHeight >= bsExtraSmall) {
+                newPopperConfig.placement = "right";
+              } else {
+                newPopperConfig.placement = "top";
+              }
+
+              let offset = newPopperConfig.modifiers.find(
+                (modifier) => modifier.name == "offset"
+              );
+              if (typeof offset !== "undefined") {
+                offset.options.offset = [0, 10];
+              }
             }
+            return newPopperConfig;
+          },
         })
-        // CAROUSEL
+    );
 
-        // CATEGORIES MENU
-        document.querySelectorAll('.cat-card .btn-show-sub').forEach((element) => {
-            element.addEventListener('click', (e) => {
-                e.preventDefault()
-                e.stopPropagation()
-                let li = element.closest('.cat-card')
-                let uls = li.getElementsByTagName('ul')
-                if (!uls.length) {
-                    return
-                }
-                if (uls[0].classList.contains('show')) {
-                    for (let ul of uls) {
-                        ul.classList.remove('show')
-                    }
-                }
-                else {
-                    let swiper = element.closest('nav').swiper
-                    if (typeof swiper !== 'undefined') {
-                        let elSwiperIndex = li.getAttribute('data-swiper-slide-index')
-
-                        if (elSwiperIndex !== swiper.realIndex) {
-                                if ((swiper.realIndex + swiper.params.slidesPerView - 1) == elSwiperIndex + swiper.slides.length) {
-                                    // console.log('slideNext')
-                                    swiper.slideNext()
-                                }
-                            }
-        
-                    }
-
-                    uls[0].classList.add('show')
-                }
-
-
-                // 
-                // 
-            })
-        })
-        // CATEGORIES MENU
-
-    })
-})()
-  
+    //         document.querySelectorAll('#header-buttons .dropdown-btn').forEach((element) => {
+    //         })
+  });
+})();
